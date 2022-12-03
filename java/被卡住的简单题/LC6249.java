@@ -1,4 +1,4 @@
-package 不值得记录的简单题;
+package 被卡住的简单题;
 
 public class LC6249 {
 
