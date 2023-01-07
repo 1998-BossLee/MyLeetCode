@@ -1,4 +1,4 @@
-package dp;
+package dp.hard;
 
 public class LC2478 {
 
