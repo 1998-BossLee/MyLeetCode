@@ -3,7 +3,7 @@ package dp.状压;
 /**
  * @author: liyangjin
  * @create: 2024-05-22 11:02
- * @Description:
+ * @Description: 测试github提交
  */
 public class LC1542 {
 
