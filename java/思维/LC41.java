@@ -1,14 +1,12 @@
-import javafx.util.Pair;
+package 思维;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.*;
-import java.util.stream.Collectors;
+/**
+ * @author: liyangjin
+ * @create: 2025-05-06 16:13
+ * @Description:
+ */
+public class LC41 {
 
-public class Main {
 
     /**
      * nums长度就100000，缺失的最大正数不会超过100001
@@ -17,7 +15,7 @@ public class Main {
      * nums[x] = -nums[x]，负数表示出现过的正数
      * 如果原数组就是负数，由于它没有用，先随便赋值成大数
      */
-    public static int firstMissingPositive(int[] nums) {
+    public int firstMissingPositive(int[] nums) {
         int n = nums.length;
         for (int i = 0; i < n; i++) {
             //0也是没用的，别占用位置
@@ -41,11 +39,4 @@ public class Main {
         return n + 1;
     }
 
-    public static void main(String[] args) {
-        int[] nums = {1, 2, 0};
-        System.out.println(firstMissingPositive(nums));
-    }
-
 }
-
-
