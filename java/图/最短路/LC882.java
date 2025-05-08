@@ -53,7 +53,7 @@ public class LC882 {
     /**
      * 单源最短路：迪杰斯特拉
      */
-    public int[] dijkstra(int n, int start, Map<Integer, List<Pair<Integer, Integer>>> edgeMap) {
+    private int[] dijkstra(int n, int start, Map<Integer, List<Pair<Integer, Integer>>> edgeMap) {
         int[] dis = new int[n];
         Arrays.fill(dis, Integer.MAX_VALUE);
         dis[start] = 0;
