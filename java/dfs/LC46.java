@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class LC46_FullPermutation {
+public class LC46 {
 
     boolean[] vis;
     List<List<Integer>> resList;
@@ -23,12 +23,11 @@ public class LC46_FullPermutation {
             return;
         }
         for (int i = 0; i < nums.length; i++) {
-            //取与不取
             if (vis[i]) {
                 continue;
             }
-            vis[i] = true;
             nowList.add(nums[i]);
+            vis[i] = true;
             dfs(nums, nowList);
             vis[i] = false;
             nowList.removeLast();
