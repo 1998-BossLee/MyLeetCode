@@ -53,7 +53,35 @@ public class LC1353 {
                 pq.poll();
                 cnt++;
             }
+        }
+        return cnt;
+    }
 
+    //不遍历max，跳到下一个
+    public int maxEvents2(int[][] events) {
+        int n = events.length;
+        Arrays.sort(events, (a, b) -> a[0] - b[0]);  //按开始时间最小排序
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        int cnt = 0, curDay = 0, idx = 0;
+        while (idx < n || !pq.isEmpty()) {
+            while (!pq.isEmpty() && pq.peek() < curDay) {
+                pq.poll();  //删除过期会议
+            }
+            while (idx < n && events[idx][0] == curDay) {
+                pq.offer(events[idx][1]);  //今天开始的会议，也就是可参加的会议
+                idx++;
+            }
+            if (idx == n && pq.isEmpty()) {
+                break;
+            }
+            if (pq.isEmpty()) {
+                //空了就跳到下一个开始时间
+                curDay = events[idx][0];
+            } else {
+                pq.poll();
+                cnt++;
+                curDay++;
+            }
         }
         return cnt;
     }
