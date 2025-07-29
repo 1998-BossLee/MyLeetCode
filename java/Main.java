@@ -11,7 +11,6 @@ import java.util.stream.Collectors;
 public class Main {
 
 
-
     public static void main(String[] args) {
         int[] nums = {1, 2, 0};
     }
