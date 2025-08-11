@@ -30,7 +30,7 @@ public class LC808 {
         }
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
-                dp[i][j] = (dp[Math.max(0, i-4)][j] + dp[Math.max(0, i-3)][j-1] + dp[Math.max(0, i-2)][Math.max(0, j-2)] + dp[i-1][Math.max(0, j-3)]) * 0.25;
+                dp[i][j] = (dp[Math.max(0, i - 4)][j] + dp[Math.max(0, i - 3)][j - 1] + dp[Math.max(0, i - 2)][Math.max(0, j - 2)] + dp[i - 1][Math.max(0, j - 3)]) * 0.25;
             }
         }
         return dp[n][n];

@@ -60,19 +60,20 @@ public class LC809 {
         return true;
     }
 
+    public static class Node {
+        char a;
+        int num;
+
+        public Node(char a, int num) {
+            this.a = a;
+            this.num = num;
+        }
+
+        public String toString() {
+            return "a=" + a + " num=" + num;
+        }
+    }
 
 }
 
-class Node {
-    char a;
-    int num;
 
-    public Node(char a, int num) {
-        this.a = a;
-        this.num = num;
-    }
-
-    public String toString() {
-        return "a=" + a + " num=" + num;
-    }
-}
