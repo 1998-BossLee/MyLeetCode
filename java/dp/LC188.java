@@ -8,7 +8,7 @@ package dp;
 public class LC188 {
 
     public int maxProfit(int k, int[] prices) {
-
+        return 0;
     }
 
 }

@@ -40,6 +40,7 @@ public class Main {
             graph.putIfAbsent(u, new ArrayList<>());
             graph.get(u).add(v);
         }
+        return 0;
     }
 
     private void dfs(int root, Map<Integer, List<Integer>> graph, int[] present, int[] future, int budget, int[][] dp) {
